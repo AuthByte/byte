@@ -32,10 +32,10 @@ local Window = Rayfield:CreateWindow({
 
 
  local Tab = Window:CreateTab("General", 4483362458) -- Title, Image
- local Section = Tab:CreateSection("Section Example")
+ local Section = Tab:CreateSection("Tools")
  local Button = Tab:CreateButton({
-    Name = "Button Example",
+    Name = "Infinite Yield",
     Callback = function()
-        print("discord")
+      loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end,
  })
