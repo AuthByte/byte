@@ -39,3 +39,51 @@ local Window = Rayfield:CreateWindow({
       loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
     end,
  })
+ local Section = Tab:CreateSection("Advertising")
+ local isSpamming = false
+local Toggle = Tab:CreateToggle({
+    Name = "Spam Discord Invite",
+    CurrentValue = false,
+    Flag = "SpamToggle",
+    Callback = function(Value)
+        isSpamming = Value
+        if isSpamming then
+            spawn(function()
+                while isSpamming do
+                    wait(1) -- Wait for 1 second
+                    game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer("🅙🅞🅘🅝 .🅖🅖/🅡🅞🅑🅛🅞🅧🅣🅡🅞🅛🅛🅔🅡🅢 🅕🅞🅡 🅛🅔🅐🅚🅔🅓 🅒🅞🅝🅕🅘🅓🅔🅝🅣🅘🅐🅛 🅖🅤🅘🅓🅔🅢, 🅔🅧🅟🅛🅞🅘🅣🅢 🅐🅝🅓 🅜🅞🅡🅔!", "All")
+                end
+            end)
+        end
+    end
+})
+ local Tab = Window:CreateTab("Washiez", 4483362458) -- Title, Image
+ local Section = Tab:CreateSection("Teleport")
+ local Button = Tab:CreateButton({
+   Name = "Middle Area",
+   Callback = function()
+     local targetPosition = Vector3.new(351, 4, 100)
+     game.Players.LocalPlayer.Character:MoveTo(targetPosition)
+   end    
+})
+local Button = Tab:CreateButton({
+   Name = "Cafe",
+   Callback = function()
+     local targetPosition = Vector3.new(463, 4, 206)
+     game.Players.LocalPlayer.Character:MoveTo(targetPosition)
+   end    
+})
+local Button = Tab:CreateButton({
+   Name = "Spawn",
+   Callback = function()
+     local targetPosition = Vector3.new(-106, 4, 99)
+     game.Players.LocalPlayer.Character:MoveTo(targetPosition)
+   end    
+})
+local Button = Tab:CreateButton({
+   Name = "Staff Spawn",
+   Callback = function()
+     local targetPosition = Vector3.new(294, 4, -192)
+     game.Players.LocalPlayer.Character:MoveTo(targetPosition)
+   end    
+})
